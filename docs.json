@@ -19,6 +19,7 @@
       }
     }
   },
+  "banner": {"content": "Testing staging!!!"},
   "interaction": { "drilldown": false },
   "appearance": {
     "default": "system",
