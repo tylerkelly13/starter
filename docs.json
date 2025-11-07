@@ -1,91 +1,58 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Megaport API Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#E40046",
+    "light": "#E40046",
+    "dark": "#E40046"
   },
-  "favicon": "/favicon.svg",
+  "fonts": {
+    "family": "Mulish"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "codeblocks": {
+      "theme": {
+        "dark": "github-dark-high-contrast",
+        "light": "github-light-high-contrast"
+      }
+    }
+  },
+  "interaction": { "drilldown": false },
+  "appearance": {
+    "default": "system",
+    "strict": false
+  },
+
+  "favicon": "/logo/favicon.svg",
+  "thumbnails": {
+    "appearance": "light",
+    "background": "/logo/Vertical Megaport Logo_RGB-WEB-01.svg"
+  },
   "navigation": {
     "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
       {
         "tab": "API reference",
         "groups": [
           {
             "group": "API documentation",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/introduction",
+              "api-reference/release-notes"
             ]
           },
           {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "Reference",
+            "openapi": "/api-reference/openapi.json"
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Megaport-Logo_RBG-WEB-01.svg",
+    "dark": "/logo/Megaport-Logo_RBG-WEB-03.svg"
   },
   "navbar": {
     "links": [
@@ -102,21 +69,28 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
       "x": "https://x.com/mintlify",
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Well, this is awkward.",
+      "description": "Something seems to be wrong and we can't find that file.\nTry our search or our navigation links to see if you can find another way to view the info you need.\nHere's a list of possible reasons for the error:\n- Mistyped URL\n- Copy-and-paste error\n- Broken link\n- Truncated link\n- Moved content\n- Deleted content"
     }
   }
 }

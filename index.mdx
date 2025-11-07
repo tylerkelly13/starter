@@ -3,18 +3,14 @@ title: "Introduction"
 description: "Welcome to the new home for your documentation"
 ---
 
-## Setting up
+import { vars } from '/snippets/variables.mdx';
+import Feedback from '/snippets/feedback.mdx';
 
-Get your documentation site up and running in minutes.
+{vars.company.short} offers a public API for access to all the services available through the {vars.portal.long}. You can use this API to automate your {vars.company.short} provisioning to save time and effort.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+The {vars.company.short} API is based on REST. The API has predictable URLs, accepts form-encoded request bodies, returns json-encoded responses, and uses standard HTTP response codes.
+
+The topics in this section step you through the API calls needed to perform common tasks such as logging in, creating a Port, and creating a VXC from the Port to a cloud provider.
 
 ## Make it yours
 
@@ -22,76 +18,27 @@ Design a docs site that looks great and empowers your users.
 
 <Columns cols={2}>
   <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
+    title="Release notes"
+    icon="receipt"
+    href="/api-reference/release-notes"
   >
-    Edit your docs locally and preview them in real time.
+    A list of changes to {vars.company.short}'s APIs
   </Card>
   <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
+    title="How to guides"
+    icon="book-open"
+    href="https://docs.megaport.com/api/"
   >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+    Step-by-step guides on how to work with {vars.company.short}'s APIs
   </Card>
   <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
-
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="API Reference"
+  icon="rocket"
+  href="/api-reference/introduction"
+  horizontal
 >
-  Browse our showcase of exceptional documentation sites.
+  Descriptions for all of {vars.company.short}'s APIs
 </Card>
+</Columns>
+
+<Feedback/>

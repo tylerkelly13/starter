@@ -1,33 +1,46 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Overview of the Megaport APIs'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+import Feedback from '/snippets/feedback.mdx'
 
-## Welcome
+Megaport offers a public API for access to all the services available through the Megaport Portal. You can use this API to automate your Megaport provisioning to save time and effort.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The Megaport API is based on REST. The API has predictable URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+In addition to this reference, you can find API tutorials in the [Megaport Documentation](https://docs.megaport.com).
 
-## Authentication
+## Environments
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+There are two server environments that can be accessed using different URLs:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+- [https://api.megaport.com](https://api.megaport.com) - this is the live Production environment. You will be liable for any services ordered in this system.
+- [https://api-staging.megaport.com](https://api-staging.megaport.com) - this is a test Staging environment and is expected to have lower availability requirements. You can test any action in this environment and the API calls and responses mirror the production system, but the services will not be deployed and you will not be billed for any activity. The staging environment is reset (to match the production environment) every 24 hours.
+
+You can use the Environments menu in the upper-left corner of this site to toggle the examples between No Environment (which shows `baseUrl`) and Staging ([https://api-staging.megaport.com](https://api-staging.megaport.com)).
+
+You can define [environment variables](https://learning.postman.com/docs/sending-requests/managing-environments/) in your Postman collection to automatically populate the `baseUrl` value in API requests and easily switch between staging and production environments.
+
+For more information about authenticating users in these environments, see [Megaport Authentication - API Keys](https://dev.megaport.com/#82876b33-a332-4b5d-8bf2-cef672f104b5).
+
+## Responses
+
+All API responses include standard HTTP response codes:
+
+- 200 - OK. A successful request.
+- 400 - Bad request. This error is typically caused by missing or incorrect request parameters.
+- 401 - Unauthorized. This error indicates that the request is missing the required authentication credentials. Typically this means a missing or invalid API access token.
+- 403 - Forbidden. You do not have the required permissions to perform this request.
+- 500 - Server error. When this occurs, Megaport developers are notified of the error by email by the server.
+- 503 - Server is unavailable, possibly down for maintenance.\n    
+
+A standard response to a request will include a message, plus optionally some data.
+
+## API Deprecation Notices
+
+From time to time we update, change versions, and deprecate APIs when releasing new functionality.
+
+We recommend that you keep up to date with these changes and plan any API integration updates accordingly. For more information, see [API Deprecation Notices and Frequently Asked Questions (FAQs)](https://docs.megaport.com/troubleshooting/api-v2-faq/).
+
+<Feedback/>
